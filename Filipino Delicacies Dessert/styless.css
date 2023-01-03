@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration:none;
+    border: none;
+    outline: none;
+    text-transform: capitalize;
+    transition: all .3s linear;
+
+}
+
+:root{
+    --white: white;
+    --black:black;
+    --red: red;
+    --box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+html::-webkit-scrollbar{
+    width: 1rem;
+
+}
+html::-webkit-scrollbar-track{
+    background-color: rgb(44, 29, 29);
+
+
+}
+html::-webkit-scrollbar-thumb{
+    background-color: var(--red);
+}
+
+.inup{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  
+
+  
+}
+.homeimg img{
+  margin-top: 15%;
+  width: 75% ;
+  height: auto;
+  
+  
+  
+}
+.videobg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: -1;
+}
+.vid{
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  z-index: -1; 
+  object-fit: cover; 
+  
+}
+.videobg{
+  width: 100%;
+  height: auto;
+  background: black;
+ 
+}
+.form-box{
+  position: relative;
+  margin-top: 250px;
+  margin-left: 300px;
+  width: 350px;
+  height: 450px;
+  background: rgb(92, 91, 91);
+  box-shadow: 15px 15px 10px rgb(0, 0, 0);
+  border-radius: 15px;
+  border: 6px solid rgb(247, 77, 77);
+  overflow: hidden;
+  
+
+}
+.buttom-box{
+  width: 220px;
+  height: 50px;
+  margin:40px auto;
+  position: relative;
+  box-shadow: 0 0 20px 3px rgb(161, 159, 159);
+  border-radius: 30px;
+  align-items: center;
+  background: rgb(56, 56, 56);
+  
+}
+
+.toggle-btn{
+  padding-left: 35px;
+  margin: 13px 5px;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  outline: none;
+  position: relative;
+  font-size: 15px;
+  color: white;
+  font-family: 'Patua One', cursive;
+}
+#btn{
+  top:0;
+  left:0;
+  position: absolute;
+  width: 120px;
+  height: 100%;
+  background: linear-gradient( to right, rgb(255, 0, 0), rgb(70, 50, 50));
+  border-radius: 30px;
+  
+}
+.input-group{
+  padding-top: 8px;
+  padding-left: 10px ;
+  font-size: 15px;
+  color: black;
+  position: absolute;
+  width: 300px;
+  
+
+}
+.input-field{
+  
+  font-size: 20px;
+  font-weight: bolder;
+  width: 100%;
+  padding: 5px;
+  margin: 10px;
+  border-left: 0;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 2px solid rgb(247, 89, 89);
+  outline: none;
+  background: transparent;
+  
+}
+.submit-btn{
+  margin-top: 3px;
+  margin-left: 15px;
+  width: 100%;
+  padding: 5px 40px;
+  border-radius: 10px;
+  font-size: 25px;
+  cursor: pointer;
+  transition: .8s;
+  color: red;
+}
+.submit-btn:hover{
+  color: white;
+  background: red;
+}
+.check-box{
+  margin: 30px 10px 30px 0;
+}
+span{
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  bottom: absolute;
+}
+#login{
+  left: 0px;
+}
+#signup{
+  left:400px;
+}

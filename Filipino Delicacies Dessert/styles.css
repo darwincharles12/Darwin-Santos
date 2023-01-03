@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration:none;
+    border: none;
+    outline: none;
+    text-transform: capitalize;
+    transition: all .3s linear;
+
+}
+
+:root{
+    --white: white;
+    --black:black;
+    --red: red;
+    --box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+html::-webkit-scrollbar{
+    width: 1rem;
+
+}
+html::-webkit-scrollbar-track{
+    background-color: rgb(44, 29, 29);
+
+
+}
+html::-webkit-scrollbar-thumb{
+    background-color: var(--red);
+}
+header{
+    position:fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    background:rgb(34, 34, 34);
+    padding:2rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: var(--box-shadow);
+    
+}
+header .logo{
+    font-size: 25px;
+    font-family: 'Patua One', cursive;
+    color: var(--white);
+}
+header .logo span{
+    font-size: 25px;
+    color: var(--red);
+    font-family: 'Patua One', cursive;
+}
+header .navbar a{
+    font-size: 25px;
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+    padding: 0 5rem;
+    
+}
+header .navbar a:hover{
+    transform: .5s;
+    color: red;
+}
+#cart-icon{
+    font-size: 30px;
+    color:red;
+    
+    cursor: pointer;
+}
+#cart-icon:hover{
+    font-size: 30px;
+    color:white;
+    transition: .8s;
+}
+section{
+    padding: 20rem 0 3rem;
+    color: white;
+}.menu{
+    color: red;
+    background: rgb(54, 54, 54);
+    
+}
+.menu .section-title{
+    margin-top: -5%;
+    text-align: center;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 50px;
+    border: 2px solid rgb(255, 0, 0) ;
+    background: black;
+    border-radius: 10px;
+    margin-bottom: 100px;
+    margin-right: 300px;
+    margin-left: 300px;
+    box-shadow: 0px 4px 15px rgb(0, 0, 0);
+    
+    
+}
+.cart{
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 500px;
+    min-height: 100vh;
+    padding: 20px;
+    background: rgb(68, 68, 68);
+    box-shadow: 0px 4px 15px rgb(0, 0, 0);
+    transition: 0.3s;
+    border-left: 3px solid red;
+   
+}
+
+.cart.active{
+    right: 0;
+   
+
+}
+.cart-title{
+    font-size: 3.5rem;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 3rem;
+    color:white;
+    font-family: 'Poppins', sans-serif;
+    border: 2px solid rgb(255, 0, 0) ;
+    background: black;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgb(0, 0, 0);
+
+    
+}
+.cart-title span{
+    color: red;
+}
+.cart-box{
+    display: grid;
+    grid-template-columns: 32% 50% 18%;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    object-fit: contain;
+    padding: 15px;
+    background: rgb(36, 36, 36);
+    box-shadow: 0px 4px 15px rgb(0, 0, 0);
+    border-radius: 10px;
+    margin-top: 20px;
+    
+}
+
+.cart-img{
+    width: 160px;
+    height: 110px;
+    border-radius: 10px;
+}
+.detail-box{
+    display: grid;
+    row-gap: 0.5rem;
+    padding-left: 25px;
+
+}
+.cart-product-title{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: red;
+    font-family: 'Patua One', cursive;
+    letter-spacing: 2px;
+    text-decoration: underline;
+    font-weight: bold;
+}
+.cart-price{
+    font-weight: 500;
+    font-size: 17px;
+    color: white;
+}
+.cart-price span{
+    font-weight: 500;
+    font-size: 20px;
+    color: gold;
+}
+.cart-quantity{
+    border: 2px solid white;
+    background: none;
+    outline-color:red ;
+    width: 4rem;
+    text-align: center;
+    font-size: 2rem;
+    color: red;
+    font-weight: bold;
+    box-shadow: 0px 4px 5px rgb(0, 0, 0);
+}
+.cart-remove{
+    font-size: 23px;
+    color: red;
+    cursor: pointer;
+    -webkit-text-stroke-color: whitesmoke;
+    -webkit-text-stroke-width: 1px;
+}
+.total{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+    border-top: 1px solid whitesmoke;
+    margin-left: 20px;
+    margin-right: 20px;
+    
+}
+.total-title{
+    font-size: 30px;
+    font-weight: bolder;
+    color: red;
+}
+.total-price{
+    margin-left: 0.5rem;
+    font-size: 30px;
+    font-weight: bolder;
+    color: white;
+    letter-spacing: 2px;
+}.total-price span{
+    margin-left: 0.5rem;
+    font-size: 30px;
+    font-weight: bolder;
+    color: gold;
+}
+.btn-checkout{
+    display: flex;
+    margin: 2rem auto 0 auto;
+    padding: 12px 20px;
+    border: none;
+    background: darkgray;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.btn-checkout:hover{
+    background: red;
+    border-radius: 5px;
+    transition: .6s;
+}
+#close-cart{
+    position: absolute;
+    top: 1rem;
+    right: 0.8rem;
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+}
+.menu .section-title span{
+    margin-top: -5%;
+    text-align: center;
+    color: red;
+    font-family: 'Poppins', sans-serif;
+    font-size: 50px;
+}
+.shop-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(400px, auto));
+    gap: 40px;
+    padding: 0 40px;
+}
+.product-box{
+    position: relative ;
+    background: rgb(43, 43, 43);
+    box-shadow: 0px 4px 15px rgb(0, 0, 0);
+}
+.product-box:hover{
+    padding:10px;
+    border:3px solid red;
+    transition: 0.8s;
+    background: rgb(43, 43, 43);
+    border-radius: 5px;
+
+
+}
+.product-img{
+    padding: 10px;
+    width: 100%;
+    height: 80%;
+    
+    border-radius: 5px;
+}
+.product-title{
+    padding-left:10px;
+    font-size: 20px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+.price{
+    padding-left:10px;
+    font-weight: 500;
+    font-size: 25px;
+    color: white;
+}
+.price span{
+    color: gold;
+}
+.add-cart{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: red;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 25px;
+}
+.add-cart:hover{
+    color: white;
+    background: blue;
+}
+.stars{
+    padding: 10px 10px ;
+    font-size: 15px;
+}
+.checked{
+    color: gold;
+}
+.bottom{
+    background:rgb(34, 34, 34);
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    padding-top: 50px;
+    
+}
+.bottom img{
+    width: 170px;
+    height: auto;
+    padding-bottom: 50px;
+}
+.bottom .Container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem,2fr));
+    color: rgb(255, 255, 255);
+    grid-gap: 1rem;
+    padding: 2rem 0;
+    border-top: 2px solid rgb(78, 77, 77);
+}
+.bottom .Container h3{
+   color: red;
+   font-size: 20px;
+   font-family: 'Poppins', sans-serif;
+   font-weight: bold;
+   padding-bottom: .9rem;   
+}
+.bottom .Container p{
+    color: #b2b2b2;
+    font-size: 17px;
+    font-family: sans-serif;
+}
+
+.bottom .Container input{
+    width: 50%;
+    border: 1px solid #b2b2b2;
+    padding: .5rem .8rem;
+    border-radius: 20px;
+ }
+ .bottom .Container ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+ }
+ .bottom .Container ul li a{
+    color: #b2b2b2 ;
+    font-size: 18px;
+    margin-left: 15px;
+ }
+ .bottom .Container div span{
+    font-size: 17px;
+    font-family: sans-serif;
+    color: #b2b2b2;
+ }
+ .logout{
+    font-size: 25px;
+    background: red;
+    color: white;
+    font-family: 'Patua One', cursive;
+    width: 120px;
+    height: 40px;
+    border-radius: 15px;
+    transition: .8s;
+}
+.logout:hover{
+    background: rgb(243, 186, 0);
+    color:red
+}
