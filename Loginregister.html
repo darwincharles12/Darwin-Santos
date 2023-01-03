@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<head>
+    <title> Sign in and Sign Up</title>
+    <link rel="stylesheet" type="text/css" href="styless.css">
+    <meta charset="UTS-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scake=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+
+    <section class="inup" id="inup">
+        
+        <div class="videobg">
+            <video src="productImg/bg.mp4" type="video/mp4" autoplay loop muted play-inline class="vid vid1"></video>
+        </div>
+        <div class="form-box">
+                <div class="buttom-box">
+                        <div id="btn"></div>
+                    <button type="button" class="toggle-btn" onclick="login()">Sign In</button>
+                    <button type="button" class="toggle-btn" onclick="signup()">Sign Up</button>
+                </div>
+                <form id="login" class="input-group">
+                    <input type="text" class="input-field" placeholder="User Id" required>
+                    <input type="password" class="input-field" placeholder="Enter Password" required>
+                    <input type="checkbox" class="check-box"><span>Remember Password</span>
+                    <button type="submit" class="submit-btn"><a href="index.html">Sign In</a></button>
+                </form>
+                <form id="signup" class="input-group">
+                    <input type="text" class="input-field" placeholder="User Id" required>
+                    <input type="text" class="input-field" placeholder="Email Address" required>
+                    <input type="password" class="input-field" placeholder="Enter Password" required>
+                    <input type="checkbox" class="check-box"><span>I agree to the terms & conditions</span>
+                    <button type="submit" class="submit-btn">Sign Up</button>
+                </form>
+                
+        </div>
+        <div class="homeimg">
+            <img src="productImg/logo.png" alt="">
+        </div>
+
+    </section>
+       <script>
+         var x = document.getElementById("login");
+         var y = document.getElementById("signup");
+         var z = document.getElementById("btn");
+
+         function signup(){
+            x.style.left= "-500px";
+            y.style.left= "0";
+            z.style.left= "110px";
+         }
+         function login(){
+            x.style.left= "0px";
+            y.style.left= "400px";
+            z.style.left= "0";
+         }
+       </script>
+
+</body>
+</html>
